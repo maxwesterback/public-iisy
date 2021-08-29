@@ -11,3 +11,5 @@ On our side the system is built on the Django tenant system which means that eve
 Database as an apartment building and the Customer gets their own apartment which is identical to all other apartments and the apartment is obviously the schema. This makes it 
 really easy for us to get one Customer set up to use the system quickly and it's impossible for them to access another Customers information. Having only one database also keeps 
 costs and maintenance down to a minimum
+
+I'm responsible for all the code except for the static folder, chart.html, index.html in home_app and company_page but of course the entire team had influence on what features we added. I'm also the one who hosted the application on Heroku 

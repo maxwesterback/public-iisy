@@ -1,0 +1,263 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IISY - Issue Tracking Made Easy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/companyPage.css' %}">
+</head>
+
+<body>
+    <main id="companyPage">
+        <nav id="navbar">
+            <div class="container">
+                <div class="nav__logo">IISY</div>
+                <ul>
+                    <li><a href="#steps">Steps</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a class="button button--main nav__link-signUp" href="#">Sign Up Free</a></li>
+                    <li><a class="nav__link-login" href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav id="navbar-mobile">
+            <div class="container">
+                <div class="nav__logo">IISY</div>
+                <button id="hamburger">
+                    <div class="hamburger__line hamburger__line-1"></div>
+                    <div class="hamburger__line hamburger__line-2"></div>
+                    <div class="hamburger__line hamburger__line-3"></div>
+                </button>
+                <ul id="navbar-mobile__dropdown">
+                    <li><a href="#steps">Steps</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a class="button button--main nav__link-signUp" href="#">Sign Up Free</a></li>
+                    <li><a class="nav__link-login" href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="hero">
+            <div class="container text-center">
+                <div class="hero__content">
+                    <h1 class="mb-4">Issue Tracking Made Easy</h1>
+                    <p class="mb-4">
+                        We enable end-users to report issues directly by scanning QR-codes, improving the workflow for
+                        maintenance employees and helping to resolve issues efficiently.
+                    </p>
+                    <button class="button--main mr-3">Start Free Trial</button>
+                    <button class="button--outline">Learn More</button>
+                </div>
+            </div>
+            <img class="hero__waveVector" src="{% static 'assets/wave-vector.svg' %}" alt="">
+        </div>
+        <section id="statement">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-sm-6">
+                        <img src="{% static 'assets/phone_qr-code.jpg' %}" alt="Phone with QR-code">
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <h2>Solving the problem of issue reporting</h2>
+                        <p>
+                            A common problem among end-users is not knowing who to report issues to. The threshold for
+                            reporting
+                            may also be high, because it may require effort from the user. In the process of reporting
+                            the
+                            issue, the information may get lost.
+                        </p>
+                        <p>
+                            Our goal is to streamline this process by allowing users to scan QR-codes on devices in
+                            order to
+                            report their status to maintenance. The status gets updated on the internal dashboard. This
+                            ensures
+                            that the status of all devices is known to maintenance at all times.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="steps">
+            <div class="container container--wide text-center">
+                <h2>How does it work?</h2>
+                <div class="row">
+                    <div class="col col-12 col-sm-6 col-lg-3">
+                        <div class="steps__step">
+                            <figure>
+                                <img src="{% static 'assets/handshake_icon.svg' %}" alt="">
+                            </figure>
+                            <figcaption>
+                                <span class="step-circle">1</span>Sign up to use our dashboard or API service
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-3">
+                        <div class="steps__step">
+                            <figure>
+                                <img src="{% static 'assets/QR_icon_2.svg' %}" alt="">
+                            </figure>
+                            <figcaption>
+                                <span class="step-circle">2</span>Print or order weatherproof QR-code tags. Place the QR
+                                codes on devices.
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-3">
+                        <div class="steps__step">
+                            <figure>
+                                <img src="{% static 'assets/phone_scan_qr_icon.svg' %}" alt="">
+                            </figure>
+                            <figcaption>
+                                <span class="step-circle">3</span>Users may scan QR codes on devices to inform
+                                maintenance of issues
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-3">
+                        <div class="steps__step">
+                            <figure>
+                                <img src="{% static 'assets/dashboard_icon.svg' %}" alt="">
+                            </figure>
+                            <figcaption>
+                                <span class="step-circle">4</span>Manage the issues through the dashboard or by quering
+                                our API
+                            </figcaption>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container text-center">
+                <h2>Pricing</h2>
+                <p class="mb-5">
+                    We offer a dashboard system as well as access to our API, if you already have a dashboard. We also
+                    offer weatherproof QR-tags. The max limit of QR-codes can be increased for paid packages. For
+                    testing the service, we offer access to the API with one tag for free.
+                </p>
+                <div class="row">
+                    <div class="col col-12 col-md-4">
+                        <div class="card card--pricing">
+                            <h3>Trial</h3>
+                            <ul>
+                                <li>API access</li>
+                                <li>One tag for testing</li>
+                                <li>No premium tags</li>
+                            </ul>
+                            <p class="card-pricing__price">FREE</p>
+                            <button class="button button--outline">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <div class="card card--pricing">
+                            <h3>Basic API</h3>
+                            <ul>
+                                <li>API access</li>
+                                <li>Max 25 tags</li>
+                                <li>No integration support</li>
+                            </ul>
+                            <p class="card-pricing__price">80€/Year</p>
+                            <button class="button button--main">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <div class="card card--pricing">
+                            <h3>Premium API</h3>
+                            <ul>
+                                <li>API access</li>
+                                <li>50 Premium tags</li>
+                                <li>No integration support</li>
+                            </ul>
+                            <p class="card-pricing__price">150€/Year</p>
+                            <button class="button button--main">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-12 col-md-6">
+                        <div class="card card--pricing ml-auto">
+                            <h3>Office</h3>
+                            <ul>
+                                <li>Branded dashboard</li>
+                                <li>Max 25 tags</li>
+                            </ul>
+                            <p class="card-pricing__price">150€/Year</p>
+                            <button class="button button--main">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6">
+                        <div class="card card--pricing mr-auto">
+                            <h3>Enterprise</h3>
+                            <ul>
+                                <li>API and/or dashboard</li>
+                                <li>1000+ tags</li>
+                            </ul>
+                            <p class="card-pricing__price">Inquire Price</p>
+                            <button class="button button--main">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="last-cta">
+            <div class="container text-center">
+                <h2>Start Your Free Trial</h2>
+                <p>
+                    Sign up for free to see how you can integrate our issue management system by using our API with one
+                    device for free.
+                </p>
+                <form class="form" action="" method="POST">
+                    <div class="row">
+                        <div class="col col-12 col-sm-6">
+                            <input class="w-100" type="text" name="firstName" placeholder="First Name">
+                        </div>
+                        <div class="col col-12 col-sm-6">
+                            <input class="w-100" type="text" name="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <input class="w-100" type="email" name="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <input class="w-100" type="text" name="company" placeholder="Company Name">
+                    </div>
+
+
+                    <input class="button button--main" type="submit" value="Sign Up Free">
+                </form>
+            </div>
+        </section>
+
+        <div id="footer">
+            <div class="container">
+                <p>
+                    &copy; IISY 2019
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <script src="{% static 'js/companyPage.js' %}"></script>
+
+</body>
+
+</html>

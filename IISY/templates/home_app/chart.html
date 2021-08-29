@@ -1,0 +1,43 @@
+{% load static %}
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+        flex: 67%;
+        padding: 1px;
+    }
+</style>
+
+<html>
+
+<head>
+    <title>IISY Reporting Dashboard</title>
+</head>
+
+<body>
+    <div>
+        <h1 align="center" , style="font-family:sans-serif;">IISY Reporting Dashboard</h1>
+    </div>
+
+    <div class="row">
+        {% if graph %}
+        <div style="width:550;height:500" ,class="column">
+            {{ graph|safe }}
+        </div>
+        {% endif %}
+        {% if table %}
+        <div style="width:800;height:500" , class="column">
+            {{ table|safe }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

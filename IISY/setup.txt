@@ -1,0 +1,8 @@
+Setting up tenants:
+
+python manage.py create_tenant
+add the domain to your hosts file, eg.: 
+127.0.0.1 utu.iisy.test
+
+create superuser (to login to admin panel):
+python manage.py create_tenant_superuser

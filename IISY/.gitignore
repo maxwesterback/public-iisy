@@ -1,0 +1,6 @@
+*.pyc
+.venv/
+.vscode/
+*.egg-info/
+__init__.py
+

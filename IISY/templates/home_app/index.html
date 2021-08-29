@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>IISY webpage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+</head>
+
+<body>
+  <main>
+    <div class="issue-screen">
+      <div class="top-bar d-flex">
+        <div class="iisy_logo mr-auto">IISY</div>
+        <button data-js="info-btn" class="ml-auto button button--info">i</button>
+      </div>
+
+      <div class="wrapper">
+        <div class="content">
+          <!-- <img class="mb-5" height="80px" src="{% static 'assets/IISY_logo.svg' %}" alt="">
+                          <h1 class="mb-4">Welcome to IISY </h1> -->
+
+          <h1 class="mb-2">Report issue for {{object.name}}</h1>
+          {% if object.shouldHaveInfoBox %}
+          <a href="#" id="tips-link" class="mb-4">
+            <img class="mt-n1" src="{% static 'assets/exclamation-mark.svg' %}" alt="">
+            Have you tried this?
+          </a>
+          {% endif %}
+          <form action="new_ticket/" method="post">
+            {% csrf_token %}
+            {% if object.shouldHaveTextBox %}
+            <!-- <label for="description">Description</label> -->
+            <textarea name="description" id="description" cols="30" rows="4" value="{{ description }}"
+              placeholder="Describe the problem for maintenance"></textarea>
+            <br>
+            {% endif %}
+            <input class="mt-4 mb-3 button button--issue" type="submit" value="Send someone to fix it" />
+          </form>
+
+          <p class="mt-3">
+            You're using {{customer.name}}'s issue report system in
+            {{object.department.name}}
+          </p>
+          <img src={{object.department.logo}} alt="" height="70">
+
+          <p>
+            Provided by <a href="http://www.newdomain.live/">IISY</a>
+          </p>
+
+        </div>
+
+        <div class="info-screen">
+          <h1>Information</h1>
+          <p>
+            IISY allows end-users to report issues, which makes maintenance work
+            more efficient in companies.
+          </p>
+          <p>
+            The system works by allowing you to scan QR-codes placed on devices.
+            When you have scanned the QR-code, all you need to do is press the
+            <strong>Send someone to fix it</strong> button. This will send the
+            issue report, informing maintenance that the device is in need of
+            attention.
+          </p>
+        </div>
+      </div>
+
+
+      {% if object.shouldHaveInfoBox %}
+      <div class="modal modal--tips" id="tips-modal">
+        <div class="text-right">
+          <button class="button" id="tips-modal-close">X</button>
+        </div>
+
+        <h2>Have you tried this?</h2>
+        <p>
+          {{ object.infoBoxContent }}
+        </p>
+      </div>
+      {% endif %}
+
+      <div id="screen-overlay">
+
+      </div>
+
+    </div>
+  </main>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

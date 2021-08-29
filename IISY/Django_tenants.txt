@@ -1,0 +1,9 @@
+Watch - https://www.youtube.com/watch?v=NsWlUMTfIFo
+
+Read: https://django-tenants.readthedocs.io/en/latest/
+      https://books.agiliq.com/projects/django-multi-tenant/en/latest/
+      
+      
+Think of the app as building and the tenant lives there. Every tenant(client) has their own apartment(schema) but they all reside in 
+the same building(database). What they do in their own apartments(Tenant_apps) doesn't affect anyone elses apartment but what they do
+outside their door or in the stairs(shared_apps) affect everyone

@@ -1,0 +1,189 @@
+/* Issue report screen styles */
+body, html {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+@media only screen and (max-width: 767px) {
+    body, html {
+      font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    body, html {
+      font-size: 15px;
+    }
+}
+
+button {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+.button {
+    transition: all 0.3s;
+    border: 0;
+}
+.button--info {
+    background: #0115CF;
+    border-radius: 100%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.button i {
+    margin-right: 0.5rem;
+}
+.button--issue {
+    background: #0115CF;
+    color: white;
+    font-weight: 700;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 3px;
+    width: 100%;
+}
+.button--issue.is-success {
+    background: green;
+}
+
+.issue-screen {
+    background: #F8FBFF;
+    height: 100vh;
+}
+
+.issue-screen, .success-screen {
+    text-align: center;
+}
+.issue-screen .content {
+    margin-top: auto;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    bottom: 40px;
+}
+.issue-screen .company-logo {
+    max-height: 40px;
+    max-width: 80px;
+    object-fit: contain;
+}
+.issue-screen h1 {
+    font-size: 2rem;
+}
+
+.issue-screen form textarea {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius: 3px;
+}
+.issue-screen .wrapper {
+    max-width: 700px;
+    height: calc(100vh - 80px);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.success-screen .content {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+.info-screen {
+    text-align: left;
+    background: #F8FBFF;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    padding: 80px 10px;
+    display: none;
+}
+.issue-screen .top-bar {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px 0 15px;
+}
+.info-screen h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.info-screen.is-showing {
+    display: block;
+}
+.issue-screen label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.89rem;
+}
+.success-screen {
+    background: #F8FBFF;
+    width: 100%;
+    height: 100vh;
+}
+.success-screen h1 {
+    font-size: 2rem;
+}
+
+.iisy_logo {
+    color: #0115CF;
+    font-size: 25px;
+    font-weight: 700;
+}
+#tips-link {
+    display: block;
+    font-size: 1.25rem;
+}
+#tips-link img {
+    height: 1rem;
+}
+.modal {
+    display: none;
+    position: absolute;
+    max-height: 90%;
+    max-width: 90%;
+    margin: auto;
+    z-index: 5;
+    padding: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: left;
+}
+.modal.is-showing {
+    display: block;
+}
+#screen-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+#screen-overlay.is-showing {
+    opacity: 1;
+    pointer-events: all;
+}
+

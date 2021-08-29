@@ -1,0 +1,303 @@
+body, html {
+    background: #FEFEFE;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1250px;
+}
+.button--main {
+    background: #0115CF;
+    color: white;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.3rem;
+}
+.button--main:hover {
+    background: rgb(0, 15, 148);
+    box-shadow: 0 8px 20px 0 rgba(117,117,118,0.2);
+}
+
+.button--outline {
+    border: 1px solid #0115CF;
+    color: #0115CF;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+}
+.button--outline:hover {
+    background: rgb(0, 15, 148);
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+section h2, h3 {
+    margin-bottom: 1.5rem;
+}
+#companyPage p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    #navbar {
+        display: none;
+    }
+    #navbar-mobile {
+        display: block !important;
+    }
+}
+#hamburger {
+    margin-top: 0.5rem;
+    float: right;
+}
+.hamburger__line {
+    border-top: 2px solid black;
+    margin-top: 6px;
+    width: 30px;
+}
+#navbar-mobile {
+    padding: 0.5rem 0;
+    display: none;
+    background: #FFFFFF;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    box-shadow: 0 8px 20px 0 rgba(117,117,118,0.2);
+}
+#navbar-mobile__dropdown {
+    padding: 0;
+    margin-left: auto;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+}
+#navbar-mobile__dropdown.is-showing {
+    display: flex;
+}
+
+#navbar-mobile ul li {
+    padding: 0.5rem 0;
+    margin: 0 !important;
+}
+
+#navbar {
+    background: #FFFFFF;
+    height: 70px;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    box-shadow: 0 8px 20px 0 rgba(117,117,118,0.2);
+}
+#navbar .container {
+    display: flex;
+    align-items: center;
+}
+.nav__logo {
+    font-size: 2rem;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: #0115CF;
+}
+#navbar ul {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+}
+#navbar ul li, #navbar-mobile ul li {
+    margin: 0 1rem;
+}
+#navbar ul li a, #navbar-mobile ul li a {
+    padding: 0.5rem;
+    color: initial;
+}
+#navbar ul li a:hover, #navbar-mobile ul li a:hover {
+    text-decoration: none;
+    opacity: 0.75;
+}
+.nav__link-signUp{
+    color: white !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+.nav__link-signUp:hover{
+    opacity: 1 !important;
+}
+.nav__link-login{
+    color: #0115CF !important;
+}
+
+#hero {
+    padding-top: 70px;
+    height: 60vh;
+    position: relative;
+    justify-content: center;
+    background: #f4f4f4;
+    margin-bottom: 150px;
+}
+
+.hero__content {
+    width: 100%;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+}
+.hero__waveVector {
+    width: 100%;
+    bottom: -75px;
+    position: absolute;
+}
+
+#statement {
+    padding-top: 0;
+}
+#statement img {
+    width: 90%;
+    box-shadow: 0 8px 20px 0 rgba(117,117,118,0.2);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#steps {
+ 
+}
+.step-circle {
+    background: #333;
+    color: white;
+    padding: 0.125rem 0.38rem;
+    border-radius: 100%;
+    margin: 0 0.5rem 0 0;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1rem;
+}
+.steps__step {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+    height: 340px;
+    background: #f4f4f4;
+    font-size: 0.88rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+}
+.steps__step figure {
+    height: 50%;
+    max-width: 130px;
+    margin: auto;
+}
+.steps__step img {
+
+    max-height: 130px;
+    object-fit: contain;
+}
+.steps__step figcaption {
+    text-align: left;
+    margin-top: 1.5rem;
+    height: 50%;
+    line-height: 180%;
+}
+@media only screen and (max-width: 991px) {
+    .steps__step {
+        max-height: 270px;
+    }
+
+}
+
+#pricing {
+    background: #f4f4f4;
+}
+#pricing .row {
+    max-width: 1020px;
+    margin: auto;
+}
+
+.card {
+    padding: 2rem 2rem;
+}
+.card--pricing {
+    border-radius: 6px;
+    background: #FFFFFF;
+    max-width: 300px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.04);
+    margin-bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+    .card--pricing {
+        margin: auto auto 40px auto;
+    }
+}
+.card--pricing h3 {
+    margin: 0 0 2rem 0;
+}
+.card-pricing__price {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+.card--pricing ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    text-align: left;
+    margin: 0;
+    font-size: 0.88rem;
+}
+.card--pricing ul li {
+    padding: 0.25rem 0;
+    opacity: 0.9;
+}
+.card--pricing .button {
+    padding: 0.5rem 1rem;
+}
+
+#last-cta {
+    
+}
+
+.form {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.form input {
+    margin-bottom: 30px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+}
+.form input.button {
+    padding: 0.5rem 1.5rem;
+}
+
+#footer {
+    background: #333333;
+    color: white;
+    padding: 1rem 0;
+}
+#footer p {
+    padding: 0;
+    margin: 0;
+}
+

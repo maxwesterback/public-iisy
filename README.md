@@ -13,3 +13,12 @@ really easy for us to get one Customer set up to use the system quickly and it's
 costs and maintenance down to a minimum
 
 I'm responsible for all the code except for the static folder, chart.html, index.html in home_app and company_page but of course the entire team had influence on what features we added. I'm also the one who hosted the application on Heroku 
+
+Things you need to make this project work locally:
+
+1. General knowledge of Django framework
+2. Install a PostgreSQL server
+3. Update the database information in SETTINGS
+4. Update Views.py in IISY_LANDING, specifically the register_ticket method on lines 83 and 120. Replace newdomain.live/admin/iisy_landing with localhost or however you want to host the application
+5. Install all the requirements and follow the setup.txt and then the user guide. Potentially the Django_tenants text file if you want a better understanding of tenants
+6. Makemigrations and migrate to your server and afterwards you should hopefully be able to run the project. Otherwise idk haven't touched this in a long while
